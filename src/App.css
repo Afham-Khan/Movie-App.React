@@ -1,0 +1,418 @@
+.App {
+  background-color: black;
+  color: white;
+  font-family: sans-serif;
+}
+
+/* Base styles */
+.movie__intro {
+  width: 80%;
+}
+
+.movie__backdrop {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  object-position: 0 35%;
+}
+
+.movie__detail {
+  align-items: center;
+  width: 75%;
+  display: flex;
+  position: relative;
+  bottom: 225px;
+}
+
+.movie__detailLeft {
+  margin-right: 30px;
+}
+
+.movie__poster {
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.86) 0px 22px 40px 6px;
+}
+
+.movie__detailRight {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 450px;
+  justify-content: space-between;
+}
+
+.movie__name {
+  font-weight: 600;
+  font-size: 3rem;
+}
+
+.movie__genres {
+  margin: 1.25rem 0;
+}
+
+.synopsisText {
+  font-size: 1.5rem;
+  margin-bottom: 1.25rem;
+  font-weight: 600;
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+.movie__links {
+  position: relative;
+  bottom: 120px;
+  display: flex;
+  justify-content: space-between;
+  width: 75%;
+}
+
+.movie__Button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem 2rem;
+  border-radius: 20px;
+  cursor: pointer;
+  width: 150px;
+  color: black;
+  font-weight: bold;
+}
+
+.movie__homeButton {
+  background-color: rgb(255, 0, 0);
+}
+
+.movie__imdbButton {
+  background-color: #f3ce13;
+}
+
+.movie__production {
+  width: 85%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 4rem;
+}
+
+/* Media Queries */
+
+/* Tablet and mobile devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .cards {
+      min-width: 160px;
+      height: 240px;
+  }
+
+  .cards__img {
+      height: 240px;
+  }
+
+  .cards__overlay {
+      height: 220px;
+      padding: 0 0.5rem;
+  }
+
+  .card__title {
+      font-size: 0.85rem;
+  }
+
+  .card__runtime, .card__description {
+      font-size: 0.65rem;
+  }
+
+  .header {
+      margin: 0 1rem;
+      padding: 0.3rem 0;
+  }
+
+  .headerLeft a > span, .headerRight a > span {
+      font-size: 1.1rem;
+      margin: 0 10px;
+  }
+
+  .header__icon {
+      width: 60px;
+  }
+
+  .movie__list {
+      padding: 0 1.5rem 1.5rem 1.5rem;
+  }
+
+  .list__title {
+      font-size: 1.5rem;
+      margin: 1.5rem;
+  }
+
+  .posterImage {
+      height: 450px;
+  }
+
+  .posterImage__title {
+      font-size: 2.5rem;
+  }
+
+  .posterImage__runtime {
+      font-size: 1.5rem;
+  }
+
+  .posterImage__description {
+      font-size: 0.9rem;
+  }
+
+  .movie__detail {
+      bottom: 150px;
+  }
+
+  .movie__poster {
+      width: 200px;
+  }
+
+  .movie__name {
+      font-size: 2.5rem;
+  }
+
+  .synopsisText {
+      font-size: 1.25rem;
+  }
+
+  .movie__heading {
+      font-size: 1.75rem;
+  }
+
+  .movie__Button {
+      width: 120px;
+      padding: 0.6rem 1.5rem;
+  }
+}
+
+/* Mobile devices (max-width: 600px) */
+@media (max-width: 600px) {
+  .cards {
+      min-width: 140px;
+      height: 200px;
+  }
+
+  .cards__img {
+      height: 200px;
+  }
+
+  .cards__overlay {
+      height: 180px;
+  }
+
+  .card__title {
+      font-size: 0.75rem;
+  }
+
+  .header {
+      margin: 0 0.5rem;
+  }
+
+  .headerLeft a > span, .headerRight a > span {
+      font-size: 1rem;
+      margin: 0 5px;
+  }
+
+  .header__icon {
+      width: 50px;
+  }
+
+  .posterImage {
+      height: 400px;
+  }
+
+  .posterImage__title {
+      font-size: 2rem;
+  }
+
+  .posterImage__runtime {
+      font-size: 1.25rem;
+  }
+
+  .posterImage__description {
+      font-size: 0.75rem;
+  }
+
+  .movie__detail {
+      bottom: 100px;
+  }
+
+  .movie__poster {
+      width: 180px;
+  }
+
+  .movie__name {
+      font-size: 2rem;
+  }
+
+  .synopsisText {
+      font-size: 1rem;
+  }
+
+  .movie__Button {
+      width: 100px;
+      padding: 0.5rem 1rem;
+  }
+}
+
+/* Small mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .cards {
+      min-width: 120px;
+      height: 180px;
+  }
+
+  .cards__img {
+      height: 180px;
+  }
+
+  .cards__overlay {
+      height: 160px;
+  }
+
+  .card__title {
+      font-size: 0.65rem;
+  }
+
+  .card__runtime, .card__description {
+      font-size: 0.55rem;
+  }
+
+  .headerLeft a > span, .headerRight a > span {
+      font-size: 0.9rem;
+  }
+
+  .posterImage {
+      height: 350px;
+  }
+
+  .posterImage__title {
+      font-size: 1.8rem;
+  }
+
+  .posterImage__runtime {
+      font-size: 1rem;
+  }
+
+  .movie__poster {
+      width: 160px;
+  }
+
+  .movie__name {
+      font-size: 1.5rem;
+  }
+
+  .synopsisText {
+      font-size: 0.85rem;
+  }
+
+  .movie__Button {
+      width: 90px;
+      padding: 0.4rem 0.8rem;
+  }
+}
+
+/* Extra small devices (max-width: 360px) */
+@media (max-width: 360px) {
+  .cards {
+      min-width: 100px;
+      height: 160px;
+  }
+
+  .cards__img {
+      height: 160px;
+  }
+
+  .cards__overlay {
+      height: 140px;
+  }
+
+  .card__title {
+      font-size: 0.55rem;
+  }
+
+  .headerLeft a > span, .headerRight a > span {
+      font-size: 0.8rem;
+  }
+
+  .posterImage {
+      height: 300px;
+  }
+
+  .posterImage__title {
+      font-size: 1.5rem;
+  }
+
+  .posterImage__runtime {
+      font-size: 0.85rem;
+  }
+
+  .movie__poster {
+      width: 140px;
+  }
+
+  .movie__name {
+      font-size: 1.2rem;
+  }
+
+  .synopsisText {
+      font-size: 0.7rem;
+  }
+
+  .movie__Button {
+      width: 80px;
+      padding: 0.3rem 0.6rem;
+  }
+}
+
+/* Additional Media Queries for the .movie component */
+
+/* Small mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .movie__backdrop {
+      height: 250px; /* Further reduce height */
+  }
+
+  .movie__poster {
+      width: 200px; /* Adjust for smaller screens */
+  }
+
+  .movie__name {
+      font-size: 2rem; /* Smaller name */
+  }
+
+  .synopsisText {
+      font-size: 1rem; /* Smaller synopsis */
+  }
+
+  .movie__Button {
+      width: 100px; /* Smaller button */
+      padding: 0.5rem 1rem; /* Smaller padding */
+  }
+}
+
+/* Extra small devices (max-width: 360px) */
+@media (max-width: 360px) {
+  .movie__backdrop {
+      height: 180px; /* Adjust height */
+  }
+
+  .movie__poster {
+      width: 100px; /* Even smaller poster */
+  }
+
+  .movie__name {
+      font-size: 1.5rem; /* Smaller name */
+  }
+
+  .synopsisText {
+      font-size: 0.85rem; /* Smaller synopsis */
+  }
+
+  .movie__Button {
+      width: 80px; /* Smaller button */
+      padding: 0.4rem 0.8rem; /* Smaller padding */
+  }
+}

@@ -1,0 +1,86 @@
+.movie__list {
+    padding: 0 3rem 3rem 3rem;
+    background-color: #1e1e1e; /* Dark background for better contrast */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    transition: background-color 0.3s ease; /* Smooth background change */
+}
+
+.movie__list:hover {
+    background-color: #242424; /* Lighter background on hover */
+}
+
+.list__title {
+    font-size: 1.75rem;
+    margin: 2.5rem;
+    color: white; /* Title color for contrast */
+    text-align: center; /* Center the title */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); /* Subtle shadow for depth */
+    transition: transform 0.3s ease; /* Smooth transform transition */
+}
+
+.list__title:hover {
+    transform: scale(1.05); /* Slight scale on hover */
+}
+
+.list__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem; /* Space between cards */
+}
+
+.card {
+    position: relative; /* For 3D effect */
+    width: 220px; /* Fixed width for consistency */
+    height: 320px; /* Fixed height for consistency */
+    overflow: hidden; /* Ensure content stays within the card */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    border-radius: 10px; /* Rounded corners for cards */
+    background-color: #282828; /* Card background color */
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+}
+
+.card:hover {
+    transform: translateY(-10px) rotateY(5deg); /* Lift and rotate on hover */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5); /* Stronger shadow on hover */
+}
+
+.card__image {
+    width: 100%;
+    height: 70%; /* Image height relative to card */
+    object-fit: cover; /* Cover image properly */
+    transition: transform 0.3s ease; /* Smooth image transition */
+}
+
+.card:hover .card__image {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+.card__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0.5rem;
+    background: rgba(0, 0, 0, 0.7); /* Dark overlay for text */
+    opacity: 0;
+    transition: opacity 0.3s ease; /* Smooth overlay transition */
+    border-radius: 0 0 10px 10px; /* Rounded corners at the bottom */
+}
+
+.card:hover .card__overlay {
+    opacity: 1; /* Show overlay on hover */
+}
+
+.card__title {
+    font-weight: bold;
+    color: white; /* Text color */
+    font-size: 1rem; /* Adjusted for visibility */
+}
+
+.card__rating {
+    color: #f39c12; /* Gold color for rating */
+    font-size: 0.9rem; /* Adjusted for visibility */
+    float: right; /* Position rating on the right */
+}

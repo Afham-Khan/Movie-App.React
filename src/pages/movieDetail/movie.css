@@ -1,0 +1,332 @@
+/* Main movie container */
+.movie {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition for scaling and shadow */
+}
+
+.movie:hover {
+    transform: scale(1.03); /* Slight scaling effect on hover */
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.8); /* Enhanced shadow effect */
+}
+
+/* Intro section */
+.movie__intro {
+    width: 80%;
+}
+
+/* Backdrop styling */
+.movie__backdrop {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    object-position: 0 35%;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.8); /* Shadow effect */
+    border-radius: 15px; /* Rounded corners */
+    transition: filter 0.3s ease; /* Transition for filter effect */
+}
+
+.movie__backdrop:hover {
+    filter: brightness(80%); /* Darken backdrop on hover */
+}
+
+/* Movie details section */
+.movie__detail {
+    align-items: center;
+    width: 75%;
+    display: flex;
+    position: relative;
+    bottom: 225px;
+    transition: bottom 0.3s ease, transform 0.3s ease; /* Transition for bottom positioning and scaling */
+}
+
+.movie__detail:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+/* Left detail section */
+.movie__detailLeft {
+    margin-right: 30px;
+}
+
+/* Poster styling */
+.movie__poster {
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.86) 0px 22px 40px 6px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for scaling and shadow */
+}
+
+.movie__poster:hover {
+    transform: scale(1.05) rotate(2deg); /* Slight scaling and rotation on hover */
+    box-shadow: rgba(0, 0, 0, 0.9) 0px 22px 40px 10px; /* Enhanced shadow */
+}
+
+/* Right detail section */
+.movie__detailRight {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 450px;
+    justify-content: space-between;
+}
+
+/* Text styling in the detail right section */
+.movie__detailRightTop > div {
+    text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.7); /* Enhanced text shadow */
+    margin-bottom: 0.5rem;
+}
+
+/* Movie name styling */
+.movie__name {
+    font-weight: 600;
+    font-size: 3rem;
+    transition: color 0.3s ease; /* Transition for color */
+}
+
+.movie__name:hover {
+    color: #ffcc00; /* Change color on hover */
+}
+
+/* Vote count styling */
+.movie__voteCount {
+    margin-left: 1rem;
+}
+
+/* Genres section */
+.movie__genres {
+    margin: 1.25rem 0;
+}
+
+/* Genre button styling */
+.movie__genre {
+    padding: 0.5rem;
+    border: 2px solid white;
+    border-radius: 20px;
+    margin-right: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transition for hover effects */
+}
+
+.movie__genre:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Light background on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+/* Detail bottom section */
+.movie__detailRightBottom {
+    margin: 2rem 0;
+    flex: 0.8;
+}
+
+/* Synopsis text styling */
+.synopsisText {
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
+    font-weight: 600;
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+/* Synopsis text last child styling */
+.synopsisText > div:last-of-type {
+    margin-left: auto;
+}
+
+/* Links section styling */
+.movie__links {
+    position: relative;
+    bottom: 120px;
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+}
+
+/* Heading styling */
+.movie__heading {
+    font-size: 2.2rem;
+    transition: color 0.3s ease; /* Transition for color */
+}
+
+.movie__heading:hover {
+    color: #ffcc00; /* Change color on hover */
+}
+
+/* Button styling */
+.movie__Button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.8rem 2rem;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 150px;
+    color: black;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s; /* Add transition for button */
+}
+
+.movie__homeButton {
+    background-color: rgb(255, 0, 0);
+}
+
+.movie__homeButton:hover {
+    background-color: rgb(0, 200, 177); /* Darken on hover */
+}
+
+.movie__imdbButton {
+    background-color: #f3ce13;
+}
+
+.movie__imdbButton:hover {
+    background-color: #d3129c; /* Darken on hover */
+}
+
+/* New tab styling */
+.newTab {
+    margin-left: 1.4rem;
+}
+
+/* Production section styling */
+.movie__production {
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 4rem;
+}
+
+/* Production company styling */
+.movie__productionCompany {
+    width: 200px;
+    margin: 2rem;
+}
+
+/* Production company image styling */
+.productionCompanyImage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* App styling */
+.App {
+    background-color: black;
+    color: white;
+    font-family: sans-serif;
+}
+
+/* Responsive Media Queries */
+
+/* Tablet and mobile devices (max-width: 768px) */
+@media (max-width: 768px) {
+    .movie__detail {
+        flex-direction: column;
+        align-items: center;
+        bottom: 150px;
+        width: 90%;
+    }
+
+    .movie__detailLeft {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .movie__poster {
+        width: 100%;
+        max-width: 250px; /* Restrict max width for small screens */
+    }
+
+    .movie__name {
+        font-size: 2.5rem;
+    }
+
+    .synopsisText {
+        font-size: 1.2rem;
+    }
+
+    .movie__heading {
+        font-size: 1.8rem;
+    }
+
+    .movie__Button {
+        width: 120px;
+        padding: 0.6rem 1.2rem;
+    }
+
+    .movie__links {
+        bottom: 100px;
+        width: 90%;
+    }
+
+    .movie__production {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Mobile devices (max-width: 600px) */
+@media (max-width: 600px) {
+    .movie__detail {
+        bottom: 100px;
+    }
+
+    .movie__name {
+        font-size: 2rem;
+    }
+
+    .synopsisText {
+        font-size: 1rem;
+    }
+
+    .movie__Button {
+        width: 100px;
+        padding: 0.5rem 1rem;
+    }
+}
+
+/* Small mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .movie__poster {
+        width: 100%;
+        max-width: 180px; /* Further restrict width for small screens */
+    }
+
+    .movie__name {
+        font-size: 1.5rem;
+    }
+
+    .synopsisText {
+        font-size: 0.85rem;
+    }
+
+    .movie__Button {
+        width: 90px;
+        padding: 0.4rem 0.8rem;
+    }
+}
+
+/* Extra small devices (max-width: 360px) */
+@media (max-width: 360px) {
+    .movie__poster {
+        width: 100%;
+        max-width: 140px; /* Max width for very small screens */
+    }
+
+    .movie__name {
+        font-size: 1.2rem;
+    }
+
+    .synopsisText {
+        font-size: 0.7rem;
+    }
+
+    .movie__Button {
+        width: 80px;
+        padding: 0.3rem 0.6rem;
+    }
+}

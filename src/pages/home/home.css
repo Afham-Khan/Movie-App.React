@@ -1,0 +1,66 @@
+.posterImage {
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px; /* Rounded corners */
+    transition: transform 0.5s ease; /* Smooth scale effect */
+}
+
+.posterImage:hover {
+    transform: translateY(-10px) scale(1.05); /* Lift and scale on hover */
+}
+
+.posterImage > img {
+    margin: auto;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio */
+    transition: filter 0.5s ease; /* Transition for filter effect */
+}
+
+.posterImage:hover > img {
+    filter: brightness(0.8); /* Darken image on hover */
+}
+
+.posterImage__overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px; /* Add padding for text */
+    background: rgba(0, 0, 0, 0.6); /* Dark transparent overlay */
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.5s ease; /* Smooth transition */
+}
+
+.posterImage:hover .posterImage__overlay {
+    opacity: 1; /* Show overlay on hover */
+}
+
+.posterImage__title {
+    font-weight: bold;
+    font-size: 2.5rem; /* Reduced size for better fitting */
+    margin: 0;
+    color: #ffffff; /* White text */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Text shadow for depth */
+}
+
+.posterImage__runtime {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    color: #f39c12; /* Gold color for runtime */
+}
+
+.posterImage__rating {
+    font-size: 1.2rem; /* Adjusted font size for visibility */
+    font-weight: bold;
+    color: #ffcc00; /* Bright yellow for rating */
+    margin-left: 0.5rem; /* Space between rating and title */
+}
+
+.posterImage__description {
+    font-style: italic;
+    font-size: 1rem;
+    color: #ffffff; /* Light text for description */
+    margin-top: 0.5rem; /* Space between description and other text */
+}

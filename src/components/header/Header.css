@@ -1,0 +1,79 @@
+.header {
+    margin: 0 2.5rem;
+    padding: 0.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #111; /* Dark background for contrast */
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+    border-radius: 10px; /* Rounded corners for a modern look */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth background change */
+}
+
+.header:hover {
+    background-color: rgba(17, 17, 17, 0.8); /* Slightly lighter on hover */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5); /* More pronounced shadow on hover */
+}
+
+.headerLeft, .headerRight {
+    display: flex;
+    align-items: center;
+}
+
+a > span {
+    margin: 0 30px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    color: white;
+    position: relative; /* Positioning for the underline effect */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+a > span::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 0;
+    height: 3px;
+    background-color: red; /* Underline color */
+    transition: width 0.3s ease, left 0.3s ease; /* Transition for the underline */
+}
+
+a > span:hover {
+    color: red; /* Change color on hover */
+}
+
+a > span:hover::after {
+    width: 100%; /* Full width on hover */
+    left: 0; /* Align to the left */
+}
+
+.header__icon {
+    width: 80px;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Smooth transform transition */
+}
+
+.header__icon:hover {
+    transform: scale(1.1) rotate(5deg); /* Scale and rotate on hover */
+}
+
+.user__avatar {
+    font-size: 2rem;
+    border-radius: 50%; /* Circular avatar */
+    overflow: hidden; /* Ensures content fits nicely */
+    width: 50px; /* Fixed width for avatar */
+    height: 50px; /* Fixed height for avatar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 0, 0, 0.7); /* Background color for avatar */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transition for background and scale */
+}
+
+.user__avatar:hover {
+    background-color: rgba(255, 0, 0, 1); /* Full color on hover */
+    transform: scale(1.1); /* Slightly scale up on hover */
+    cursor: pointer; /* Change cursor to pointer */
+}
